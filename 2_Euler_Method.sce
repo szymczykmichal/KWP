@@ -1,6 +1,6 @@
 clc; clear;close;
 
-exec('./ode1.sci');
+exec('ode1.sci');
 x = 0:0.5:4;
 
 deff('[t]=f(x,y)','t = -2*x^3+12*x^2-20*x+8.5');

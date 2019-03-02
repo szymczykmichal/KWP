@@ -16,4 +16,12 @@ Wstęp:
 
     KWP vs pozostałe obszary wiedzy mechanicznej
 
-        
+
+1. Srodowisko Scilab - powtorka
+	
+
+
+	Dodatkowo:
+		
+		reprezentacja liczb zmiennoprzecinkowych		
+		zadanie - mnozenie macierzy
