@@ -2,10 +2,10 @@ clear, close
 exec ode1.sci;
 clc
 
-                                |         |
-    |   q1   |                  |    q2   |
-    ---------------------------------------
-   /\    L/4        L/2            L/4    /\
+//                                |         |
+//    |   q1   |                  |    q2   |
+//    ---------------------------------------
+//   /\    L/4        L/2            L/4    /\
 
 // parametry
 L = 4000;              // długość belki
@@ -35,21 +35,21 @@ function dydx = pochodna(x, y, q1, q2, EI, L)
   dydx(2,1) = -M/EI;
 endfunction
 
-function M = Momentum(x, q1, q2, L)
-    RA = q1*(7/32)*L+q2*(L/32)
-// równanie momentu 
-  if x <= L/4 then
-      M = -RA*x + q1*x*x/2
-  elseif x > L/4 && x <= (3*L)/4 then
-      M = -RA*x + q1*(L/4)*(x-L/8)
-  else
-      M = -RA*x + q1*(L/4)*(x-L/8) + q2*(x-(3*L)/4)*(x-(3*L)/4)*0.5
-  end
-endfunction
-
-for i=1:length(x)
-    M(i)=Momentum(x(i), q1, q2, L);
-end
+//function M = Momentum(x, q1, q2, L)
+//    RA = q1*(7/32)*L+q2*(L/32)
+//// równanie momentu 
+//  if x <= L/4 then
+//      M = -RA*x + q1*x*x/2
+//  elseif x > L/4 && x <= (3*L)/4 then
+//      M = -RA*x + q1*(L/4)*(x-L/8)
+//  else
+//      M = -RA*x + q1*(L/4)*(x-L/8) + q2*(x-(3*L)/4)*(x-(3*L)/4)*0.5
+//  end
+//endfunction
+//
+//for i=1:length(x)
+//    M(i)=Momentum(x(i), q1, q2, L);
+//end
 
 // pierwszy strzał
 fi1 = -1e-3;
